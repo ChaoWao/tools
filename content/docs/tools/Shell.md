@@ -31,9 +31,9 @@ export https_proxy=127.0.0.1:4780
 proxy="127.0.0.1:4780"
 function proxy_see {
     if [ -z "${http_proxy}" ] ; then
-        echo "Your proxy is off now!"
+        echo "Your proxy for shell is off now!"
     else
-        echo "Your proxy is on now!"
+        echo "Your proxy for shell is on now!"
     fi
 }
 
@@ -42,7 +42,7 @@ function proxy_on {
     export https_proxy=${proxy}
     export HTTP_PROXY=${proxy}
     export HTTPS_PROXY=${proxy}
-    echo "Your proxy for zsh is on!"
+    echo "Your proxy for shell is on!"
 }
 
 function proxy_off {
@@ -50,7 +50,7 @@ function proxy_off {
     unset https_proxy
     unset HTTP_PROXY
     unset HTTPS_PROXY
-    echo "Your proxy for zsh is off!"
+    echo "Your proxy for shell is off!"
 }
 ```
 
@@ -79,7 +79,7 @@ sudo pacman -S zsh
 | **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`   |
 | **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
 
-#### Configuration
+### Configuration
 
 Select the theme in `~/.zshrc`:
 
@@ -87,9 +87,9 @@ Select the theme in `~/.zshrc`:
 ZSH_THEME="eastwood"
 ```
 
-#### Extensions
+### Extensions
 
-##### aliases
+#### aliases
 
 ```sh
 plugins=(
@@ -110,7 +110,7 @@ plugins=(
 
 - `als --groups`: show only group names
 
-##### colored-man-pages
+#### colored-man-pages
 
 ```sh
 plugins=(
@@ -119,7 +119,7 @@ plugins=(
 )
 ```
 
-##### command-not-found
+#### command-not-found
 
 ```sh
 plugins=(
@@ -128,7 +128,7 @@ plugins=(
 )
 ```
 
-##### extract
+#### extract
 
 ```sh
 plugins=(
@@ -137,7 +137,7 @@ plugins=(
 )
 ```
 
-##### you-should-use
+#### you-should-use
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
@@ -162,7 +162,7 @@ plugins=(
 
 4. Restart zsh (such as by opening a new instance of your terminal emulator).
 
-##### zsh-syntax-highlighting
+#### zsh-syntax-highlighting
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
@@ -181,7 +181,7 @@ plugins=(
 
 3. Restart zsh (such as by opening a new instance of your terminal emulator).
 
-##### zsh-autosuggestions
+#### zsh-autosuggestions
 
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
@@ -200,7 +200,7 @@ plugins=(
 
 3. Start a new terminal session.
 
-##### zsh-autocomplete
+#### zsh-autocomplete
 
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 

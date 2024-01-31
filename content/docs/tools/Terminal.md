@@ -29,7 +29,7 @@ pamac install alacritty
 wget -O- https://raw.githubusercontent.com/dracula/alacritty/master/dracula.toml ~/.config/alacritty/dracula.toml
 ```
 
-修改配置文件：
+`Linux` 修改配置文件：
 
 ```toml
 import = ["~/.config/alacritty/dracula.toml"]
@@ -38,6 +38,7 @@ live_config_reload = true
 
 [window]
 opacity = 0.7
+padding = { x = 10, y = 5 }
 dynamic_padding = false
 startup_mode = "Maximized"
 decorations = "None"
@@ -53,3 +54,33 @@ italic = { family = "MesloLGS NF", style = "Italic" }
 bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
 size = 16
 ```
+
+`Windows` 修改配置文件：
+
+```toml
+import = ["~\\AppData\\Roaming\\alacritty\\dracula.toml"]
+
+shell = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+
+live_config_reload = true
+
+[window]
+opacity = 0.9
+padding = { x = 10, y = 5 }
+dynamic_padding = false
+startup_mode = "Maximized"
+decorations = "None"
+
+[scrolling]
+history = 2000
+multiplier = 20
+
+[font]
+normal = { family = "MesloLGS NF", style = "Regular" }
+bold = { family = "MesloLGS NF", style = "Bold" }
+italic = { family = "MesloLGS NF", style = "Italic" }
+bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+size = 16
+```
+
+可以在 alacritty 的启动 shortcut 里把启动位置改为 `%USERPROFILE%` 。

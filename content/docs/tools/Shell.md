@@ -54,6 +54,46 @@ function proxy_off {
 }
 ```
 
+### Starship 主题
+
+[Starship](https://starship.rs/)
+
+安装
+
+```sh
+# pamac
+pamac install starship
+# general
+curl -sS https://starship.rs/install.sh | sh
+```
+
+使用
+
+```sh
+# use in zsh
+eval "$(starship init zsh)"
+```
+
+配置
+
+```toml
+# ~/.config/starship.toml
+
+[character]
+error_symbol = "[λ](bold red)"
+success_symbol = "[λ](bold green)"
+
+[directory]
+truncate_to_repo = false # Repos dir only shows repo name, disable
+truncation_length = 0 # Show full path
+
+[time]
+style = "bright white"
+time_format = "%T"
+format = "$time($style) "
+disabled = false
+```
+
 ## Bash: Bourne Again SHell
 
 最通用的 Shell ，但是暂略。

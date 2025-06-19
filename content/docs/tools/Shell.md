@@ -102,13 +102,28 @@ disabled = false
 
 当前，也许你的系统中默认就使用 Zsh ，或提供了 Zsh 。如果没有，可以参考文章 [Installing ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) 完成 Zsh 的安装和配置。
 
-如可以使用如下相应命令安装 Zsh ：
+可以使用如下相应命令安装 Zsh ：
 
 ```sh
 # install using apt
 sudo apt install zsh
 # install using pacman
 sudo pacman -S zsh
+```
+
+如果没有 root 权限，也可以源码编译安装：
+
+```
+cd $HOME
+mkdir Apps
+git clone https://github.com/zsh-users/zsh.git
+cd zsh
+./Util/preconfig
+./configure --prefix=$HOME/Apps/zsh
+make -j
+make install
+cd ../
+rm -rf zsh
 ```
 
 ### [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
